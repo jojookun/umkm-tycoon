@@ -1,0 +1,69 @@
+{
+  "source": "UI playground, synthetic test session",
+  "weeks": [
+    {
+      "week": 1,
+      "case": "Pisah kas + cadangan 50.000",
+      "cash": "Rp 1.524.500"
+    },
+    {
+      "week": 2,
+      "case": "HPP + draw 50.000 + cadangan 50.000",
+      "cash": "Rp 1.453.000"
+    },
+    {
+      "week": 3,
+      "case": "Stok145 harga16.000",
+      "cash": "Rp 1.169.450"
+    },
+    {
+      "week": 4,
+      "case": "Aktivasi QRIS",
+      "cash": "Rp 1.502.850"
+    },
+    {
+      "week": 5,
+      "case": "Aktivasi WA",
+      "cash": "Rp 1.587.850"
+    },
+    {
+      "week": 6,
+      "case": "Adaptasi wedang saat hujan",
+      "cash": "Rp 1.608.650"
+    },
+    {
+      "week": 7,
+      "case": "Katering kerja sama Bu Ratna 40 porsi",
+      "cash": "Rp 1.783.750"
+    },
+    {
+      "week": 8,
+      "case": "Servis dengan pinjaman mahal",
+      "cash": "Rp 1.918.750"
+    },
+    {
+      "week": 9,
+      "case": "Pinjaman kedua ditolak; verifikasi pembayaran",
+      "cash": "Rp 1.903.750"
+    },
+    {
+      "week": 10,
+      "case": "Overload dibanding replay bantuan pekerja Rp100.000",
+      "overloadCash": "Rp1.474.750",
+      "cash": "Rp 1.374.750"
+    },
+    {
+      "week": 11,
+      "case": "Adaptasi nasi telur",
+      "cash": "Rp 1.359.750"
+    },
+    {
+      "week": 12,
+      "case": "Ayam kembali, cicilan terakhir, rapor stabil",
+      "cash": "Rp998.450",
+      "reserve": "Rp300.000",
+      "personal": "Rp450.000",
+      "debt": "Rp0"
+    }
+  ]
+}

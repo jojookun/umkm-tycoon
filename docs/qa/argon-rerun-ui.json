@@ -1,0 +1,24 @@
+{
+  "contentVersion": "2026.10.31.2",
+  "cases": [
+    {
+      "case": "Replay tanpa kanal M4 sampai M8",
+      "result": "an\nQRIS belum diaktifkan pada pilihan ini. Periksa kapasitas sebelum menambah kanal.\nKeputusan operasional\nTarget stok (porsi)\n80 porsi\n110 porsi\n145 porsi\nHarga per porsi\nRp\n12.000\nRp\n14.000\nRp\n16.000\nLihat Biaya Sebenarnya (HPP)\nRp 10.500 / porsi ›\nKanal penjualan\nQRIS · belum aktif\nWA · belum aktif\nPromo\nRincian operasional dan dompet\nHitung ulang sampai\nMinggu 4\nMinggu 5\nMinggu 6\nMinggu 7\nMinggu 8\nHitung Simulasi Alternatif\nPerbandingan Dampak Keuangan\n\nKas alternatif: Rp 1.583.900.\n\nCadangan: Rp 0. Sisa kewajiban: Rp 0.\n\nSelisih kas terhadap hasil utama M8: -Rp 106.500.\n\nKepercayaan 80/100 · Kondisi pekerja 80/100.\n\nGunakan Keputusan Ini"
+    },
+    {
+      "case": "Replay tanpa kanal M5 sampai M8",
+      "result": "sApp belum diaktifkan.\nC. Tinjau kapasitas dulu\nWhatsApp belum diaktifkan. Tetap atur stok sesuai perkiraan.\nKeputusan operasional\nTarget stok (porsi)\n80 porsi\n110 porsi\n145 porsi\nHarga per porsi\nRp\n12.000\nRp\n14.000\nRp\n16.000\nLihat Biaya Sebenarnya (HPP)\nRp 10.500 / porsi ›\nKanal penjualan\nQRIS\nWA · belum aktif\nPromo\nRincian operasional dan dompet\nHitung ulang sampai\nMinggu 5\nMinggu 6\nMinggu 7\nMinggu 8\nHitung Simulasi Alternatif\nPerbandingan Dampak Keuangan\n\nKas alternatif: Rp 1.640.700.\n\nCadangan: Rp 0. Sisa kewajiban: Rp 0.\n\nSelisih kas terhadap hasil utama M8: -Rp 49.700.\n\nKepercayaan 80/100 · Kondisi pekerja 80/100.\n\nGunakan Keputusan Ini"
+    },
+    {
+      "case": "Demo modal M5 kurang Rp83.750",
+      "recoveredWeek": 5,
+      "recoveredCash": "Rp 738.250"
+    }
+  ],
+  "inventoryM12": "8,75 porsi",
+  "reportButton": {
+    "detailsClosed": true,
+    "focus": "report-title",
+    "scrollY": 0
+  }
+}

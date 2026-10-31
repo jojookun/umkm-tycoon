@@ -1,0 +1,789 @@
+{
+  "schemaVersion": "2.2.0",
+  "contentVersion": "2026.10.31.2",
+  "config": {
+    "schemaVersion": "2.2.0",
+    "contentVersion": "2026.10.31.2",
+    "initialTrustScore": 80,
+    "initialWellbeingScore": 80,
+    "fridgeRepairCostRp": 450000,
+    "partTimeCostRp": 100000,
+    "initialTotalMoneyRp": 2000000,
+    "initialBusinessCashRp": 1600000,
+    "initialPersonalCashRp": 400000,
+    "weeklyFixedCostRp": 250000,
+    "baseDemandPortions": 100,
+    "normalCapacityPortions": 120,
+    "overtimeCapacityPortions": 160,
+    "highStockDiscountPerPortionRp": 300,
+    "coopDiscountPerPortionRp": 500,
+    "promoPriceCutPerPortionRp": 2000,
+    "priceFactorsBps": {
+      "12000": 11500,
+      "14000": 10000,
+      "16000": 8000
+    },
+    "channelFactorsBps": {
+      "cashOnly": 9000,
+      "qrisActive": 10500,
+      "waActive": 11500,
+      "promoActive": 13500
+    },
+    "normalWasteRateBps": 5000,
+    "brokenFridgeWasteRateBps": 9000,
+    "menus": {
+      "nasi_ayam_lengkuas": {
+        "id": "nasi_ayam_lengkuas",
+        "name": "Nasi Ayam Lengkuas",
+        "perceivedHppRp": 8000,
+        "rawMaterialCostRp": 7200,
+        "packagingCostRp": 1000,
+        "utilityAllocationRp": 800,
+        "laborAllocationRp": 1500,
+        "trueHppRp": 10500,
+        "defaultSellingPriceRp": 14000
+      },
+      "nasi_telur_krispi": {
+        "id": "nasi_telur_krispi",
+        "name": "Nasi Telur Krispi",
+        "perceivedHppRp": 4200,
+        "rawMaterialCostRp": 4200,
+        "packagingCostRp": 1000,
+        "utilityAllocationRp": 800,
+        "laborAllocationRp": 1500,
+        "trueHppRp": 7500,
+        "defaultSellingPriceRp": 11000
+      },
+      "tahu_tempe_bacem": {
+        "id": "tahu_tempe_bacem",
+        "name": "Tahu Tempe Bacem",
+        "perceivedHppRp": 0,
+        "rawMaterialCostRp": 0,
+        "packagingCostRp": 0,
+        "utilityAllocationRp": 0,
+        "laborAllocationRp": 0,
+        "trueHppRp": 0,
+        "defaultSellingPriceRp": 0
+      },
+      "es_teh_wedang_jahe": {
+        "id": "es_teh_wedang_jahe",
+        "name": "Wedang Jahe",
+        "perceivedHppRp": 0,
+        "rawMaterialCostRp": 0,
+        "packagingCostRp": 0,
+        "utilityAllocationRp": 0,
+        "laborAllocationRp": 0,
+        "trueHppRp": 0,
+        "defaultSellingPriceRp": 0
+      }
+    },
+    "loans": {
+      "formal_productive": {
+        "id": "formal_productive",
+        "name": "Pinjaman Formal",
+        "principalRp": 450000,
+        "totalInterestOrFeeRp": 18000,
+        "totalObligationRp": 468000,
+        "tenorWeeks": 4,
+        "weeklyInstallmentRp": 117000,
+        "weeklyPrincipalRp": 112500,
+        "weeklyInterestRp": 4500
+      },
+      "instant_high_cost": {
+        "id": "instant_high_cost",
+        "name": "Si Cepat Cair",
+        "principalRp": 450000,
+        "totalInterestOrFeeRp": 150000,
+        "totalObligationRp": 600000,
+        "tenorWeeks": 4,
+        "weeklyInstallmentRp": 150000,
+        "weeklyPrincipalRp": 112500,
+        "weeklyInterestRp": 37500
+      }
+    }
+  },
+  "weeks": [
+    {
+      "week": 1,
+      "isJudgeDemoStop": true,
+      "title": "Kas usaha, uang keluarga",
+      "learningObjective": "Pisahkan dompet dan pahami penarikan pemilik.",
+      "featuredCharacterId": "dimas",
+      "animationState": "idle_cooking",
+      "characterDialogue": "Kak, biaya kuliahku Rp400.000. Bagaimana supaya uang warung tetap tercatat?",
+      "shockTitle": "Kas usaha, uang keluarga",
+      "shockDescription": "Pisahkan dompet dan pahami penarikan pemilik.",
+      "eventDemandFactorBps": 10000,
+      "rawMaterialExtraCostRp": 0,
+      "choices": [
+        {
+          "label": "Pisahkan dompet",
+          "description": "Rp1.600.000 untuk usaha dan Rp400.000 untuk pribadi. Pemisahan ini tidak mengeluarkan uang kedua kali.",
+          "action": {
+            "type": "SPLIT_INITIAL_WALLET",
+            "businessCashRp": 1600000,
+            "personalCashRp": 400000
+          },
+          "immediateTrustDelta": 0,
+          "immediateWellbeingDelta": 0,
+          "debriefExplanation": "Rp1.600.000 untuk usaha dan Rp400.000 untuk pribadi. Pemisahan ini tidak mengeluarkan uang kedua kali.",
+          "key": "A"
+        },
+        {
+          "label": "Tinjau kebutuhan keluarga",
+          "description": "Dompet tetap terpisah. Atur penarikan pribadi melalui kontrol operasional jika memang dibutuhkan.",
+          "action": {
+            "type": "NO_OP"
+          },
+          "immediateTrustDelta": 0,
+          "immediateWellbeingDelta": 0,
+          "debriefExplanation": "Dompet tetap terpisah. Atur penarikan pribadi melalui kontrol operasional jika memang dibutuhkan.",
+          "key": "B"
+        },
+        {
+          "label": "Dahulukan pencatatan",
+          "description": "Periksa semua dompet sebelum menentukan stok dan harga.",
+          "action": {
+            "type": "NO_OP"
+          },
+          "immediateTrustDelta": 0,
+          "immediateWellbeingDelta": 0,
+          "debriefExplanation": "Periksa semua dompet sebelum menentukan stok dan harga.",
+          "key": "C"
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "isJudgeDemoStop": false,
+      "title": "Harga ramai belum tentu untung",
+      "learningObjective": "Bedakan harga jual, HPP, dan biaya tetap.",
+      "featuredCharacterId": "kang_deden",
+      "animationState": "idle_cooking",
+      "characterDialogue": "Bahan bukan satu-satunya biaya, Bu. Ada kemasan, gas, dan tenaga produksi juga.",
+      "shockTitle": "Harga ramai belum tentu untung",
+      "shockDescription": "Bedakan harga jual, HPP, dan biaya tetap.",
+      "eventDemandFactorBps": 10000,
+      "rawMaterialExtraCostRp": 0,
+      "choices": [
+        {
+          "label": "Periksa biaya sebenarnya",
+          "description": "Buka rincian HPP sebelum menetapkan harga.",
+          "action": {
+            "type": "NO_OP"
+          },
+          "immediateTrustDelta": 0,
+          "immediateWellbeingDelta": 0,
+          "debriefExplanation": "Buka rincian HPP sebelum menetapkan harga.",
+          "key": "A"
+        },
+        {
+          "label": "Uji harga terjangkau",
+          "description": "Harga rendah menarik lebih banyak permintaan, tetapi margin per porsi mengecil.",
+          "action": {
+            "type": "NO_OP"
+          },
+          "immediateTrustDelta": 0,
+          "immediateWellbeingDelta": 0,
+          "debriefExplanation": "Harga rendah menarik lebih banyak permintaan, tetapi margin per porsi mengecil.",
+          "key": "B"
+        },
+        {
+          "label": "Uji margin lebih besar",
+          "description": "Harga tinggi meningkatkan margin, tetapi permintaan bisa berkurang.",
+          "action": {
+            "type": "NO_OP"
+          },
+          "immediateTrustDelta": 0,
+          "immediateWellbeingDelta": 0,
+          "debriefExplanation": "Harga tinggi meningkatkan margin, tetapi permintaan bisa berkurang.",
+          "key": "C"
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "isJudgeDemoStop": false,
+      "title": "Godaan stok besar",
+      "learningObjective": "Sesuaikan pembelian dengan permintaan dan kas.",
+      "featuredCharacterId": "haji_bambang",
+      "animationState": "idle_cooking",
+      "characterDialogue": "Ada acara kampung. Mau ambil bahan lebih banyak? Diskon tersedia untuk target 145 porsi.",
+      "shockTitle": "Godaan stok besar",
+      "shockDescription": "Sesuaikan pembelian dengan permintaan dan kas.",
+      "eventDemandFactorBps": 10000,
+      "rawMaterialExtraCostRp": 0,
+      "choices": [
+        {
+          "label": "Gunakan perkiraan realistis",
+          "description": "Acara kampung bukan jaminan permintaan. Tentukan stok melalui kontrol di bawah.",
+          "action": {
+            "type": "NO_OP"
+          },
+          "immediateTrustDelta": 0,
+          "immediateWellbeingDelta": 0,
+          "debriefExplanation": "Acara kampung bukan jaminan permintaan. Tentukan stok melalui kontrol di bawah.",
+          "key": "A"
+        },
+        {
+          "label": "Pertimbangkan diskon grosir",
+          "description": "Diskon Rp300 per porsi hanya untuk bahan baru pada target stok 145.",
+          "action": {
+            "type": "NO_OP"
+          },
+          "immediateTrustDelta": 0,
+          "immediateWellbeingDelta": 0,
+          "debriefExplanation": "Diskon Rp300 per porsi hanya untuk bahan baru pada target stok 145.",
+          "key": "B"
+        },
+        {
+          "label": "Utamakan likuiditas",
+          "description": "Periksa bahan yang masih tersedia sebelum membeli stok baru.",
+          "action": {
+            "type": "NO_OP"
+          },
+          "immediateTrustDelta": 0,
+          "immediateWellbeingDelta": 0,
+          "debriefExplanation": "Periksa bahan yang masih tersedia sebelum membeli stok baru.",
+          "key": "C"
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "isJudgeDemoStop": true,
+      "title": "Pelanggan meminta QRIS",
+      "learningObjective": "Pahami kanal pembayaran dan permintaan.",
+      "featuredCharacterId": "mbak_nisa",
+      "animationState": "idle_cooking",
+      "characterDialogue": "Bisa bayar pakai QRIS? Saya jarang membawa uang tunai.",
+      "shockTitle": "Pelanggan meminta QRIS",
+      "shockDescription": "Pahami kanal pembayaran dan permintaan.",
+      "eventDemandFactorBps": 10000,
+      "rawMaterialExtraCostRp": 0,
+      "choices": [
+        {
+          "label": "Aktifkan QRIS",
+          "description": "Kanal QRIS tersedia mulai keputusan ini.",
+          "action": {
+            "type": "UNLOCK_CHANNEL",
+            "channel": "qris"
+          },
+          "immediateTrustDelta": 0,
+          "immediateWellbeingDelta": 0,
+          "debriefExplanation": "Kanal QRIS tersedia mulai keputusan ini.",
+          "key": "A"
+        },
+        {
+          "label": "Tetap menerima tunai",
+          "description": "QRIS tidak diaktifkan. Usaha masih dapat berjalan dengan kanal tunai.",
+          "action": {
+            "type": "NO_OP"
+          },
+          "immediateTrustDelta": 0,
+          "immediateWellbeingDelta": 0,
+          "debriefExplanation": "QRIS tidak diaktifkan. Usaha masih dapat berjalan dengan kanal tunai.",
+          "key": "B"
+        },
+        {
+          "label": "Tinjau kesiapan",
+          "description": "QRIS belum diaktifkan pada pilihan ini. Periksa kapasitas sebelum menambah kanal.",
+          "action": {
+            "type": "NO_OP"
+          },
+          "immediateTrustDelta": 0,
+          "immediateWellbeingDelta": 0,
+          "debriefExplanation": "QRIS belum diaktifkan pada pilihan ini. Periksa kapasitas sebelum menambah kanal.",
+          "key": "C"
+        }
+      ]
+    },
+    {
+      "week": 5,
+      "isJudgeDemoStop": false,
+      "title": "Pesanan lewat WhatsApp",
+      "learningObjective": "Hubungkan kanal dengan stok dan kapasitas.",
+      "featuredCharacterId": "mbak_nisa",
+      "animationState": "idle_cooking",
+      "characterDialogue": "Teman kantor ingin pesan lewat grup WhatsApp. Bisa kami pesan dari sana?",
+      "shockTitle": "Pesanan lewat WhatsApp",
+      "shockDescription": "Hubungkan kanal dengan stok dan kapasitas.",
+      "eventDemandFactorBps": 10000,
+      "rawMaterialExtraCostRp": 0,
+      "choices": [
+        {
+          "label": "Buka pesanan WhatsApp",
+          "description": "Kanal WA tersedia. Faktor kanal tertinggi dipakai satu kali.",
+          "action": {
+            "type": "UNLOCK_CHANNEL",
+            "channel": "whatsapp"
+          },
+          "immediateTrustDelta": 0,
+          "immediateWellbeingDelta": 0,
+          "debriefExplanation": "Kanal WA tersedia. Faktor kanal tertinggi dipakai satu kali.",
+          "key": "A"
+        },
+        {
+          "label": "Fokus kanal yang ada",
+          "description": "WhatsApp belum diaktifkan.",
+          "action": {
+            "type": "NO_OP"
+          },
+          "immediateTrustDelta": 0,
+          "immediateWellbeingDelta": 0,
+          "debriefExplanation": "WhatsApp belum diaktifkan.",
+          "key": "B"
+        },
+        {
+          "label": "Tinjau kapasitas dulu",
+          "description": "WhatsApp belum diaktifkan. Tetap atur stok sesuai perkiraan.",
+          "action": {
+            "type": "NO_OP"
+          },
+          "immediateTrustDelta": 0,
+          "immediateWellbeingDelta": 0,
+          "debriefExplanation": "WhatsApp belum diaktifkan. Tetap atur stok sesuai perkiraan.",
+          "key": "C"
+        }
+      ]
+    },
+    {
+      "week": 6,
+      "isJudgeDemoStop": false,
+      "title": "Hujan seharian",
+      "learningObjective": "Sesuaikan rencana ketika permintaan turun.",
+      "featuredCharacterId": "sari_pertiwi",
+      "animationState": "idle_cooking",
+      "characterDialogue": "Jalan sepi sejak pagi. Kita perlu menyesuaikan rencana minggu ini.",
+      "shockTitle": "Hujan seharian",
+      "shockDescription": "Sesuaikan rencana ketika permintaan turun.",
+      "eventDemandFactorBps": 6500,
+      "rawMaterialExtraCostRp": 0,
+      "choices": [
+        {
+          "label": "Sesuaikan stok",
+          "description": "Permintaan reguler minggu ini menjadi 65% dari kondisi biasa.",
+          "action": {
+            "type": "NO_OP"
+          },
+          "immediateTrustDelta": 0,
+          "immediateWellbeingDelta": 0,
+          "debriefExplanation": "Permintaan reguler minggu ini menjadi 65% dari kondisi biasa.",
+          "key": "A"
+        },
+        {
+          "label": "Tawarkan wedang hangat",
+          "description": "Strategi minuman memperbaiki faktor permintaan menjadi 85%; bukan penjualan menu kedua.",
+          "action": {
+            "type": "CONTEXTUAL_MENU_ADAPT",
+            "menuId": "es_teh_wedang_jahe",
+            "demandModifierBps": 8500
+          },
+          "immediateTrustDelta": 0,
+          "immediateWellbeingDelta": 0,
+          "debriefExplanation": "Strategi minuman memperbaiki faktor permintaan menjadi 85%; bukan penjualan menu kedua.",
+          "key": "B"
+        },
+        {
+          "label": "Pertahankan rencana",
+          "description": "Permintaan tetap turun menjadi 65%. Periksa risiko bahan tersisa.",
+          "action": {
+            "type": "NO_OP"
+          },
+          "immediateTrustDelta": 0,
+          "immediateWellbeingDelta": 0,
+          "debriefExplanation": "Permintaan tetap turun menjadi 65%. Periksa risiko bahan tersisa.",
+          "key": "C"
+        }
+      ]
+    },
+    {
+      "week": 7,
+      "isJudgeDemoStop": false,
+      "title": "Pesanan katering 80 porsi",
+      "learningObjective": "Kelola uang muka dan kapasitas kontrak.",
+      "featuredCharacterId": "pak_rt_karso",
+      "animationState": "idle_cooking",
+      "characterDialogue": "Kami perlu 80 porsi untuk acara warga, Rp14.000 per porsi. Bagaimana kesanggupannya?",
+      "shockTitle": "Pesanan katering 80 porsi",
+      "shockDescription": "Kelola uang muka dan kapasitas kontrak.",
+      "eventDemandFactorBps": 10000,
+      "rawMaterialExtraCostRp": 0,
+      "choices": [
+        {
+          "label": "Terima, minta DP 50%",
+          "description": "Sari memasak 80 porsi. DP Rp560.000, pelunasan Rp560.000.",
+          "action": {
+            "type": "CATERING_CONTRACT",
+            "mode": "self_dp50"
+          },
+          "immediateTrustDelta": 0,
+          "immediateWellbeingDelta": 0,
+          "debriefExplanation": "Sari memasak 80 porsi. DP Rp560.000, pelunasan Rp560.000.",
+          "key": "A"
+        },
+        {
+          "label": "Kerja sama Bu Ratna",
+          "description": "Sari menangani 40 porsi. DP Rp280.000; diskon bahan khusus bagian Sari.",
+          "action": {
+            "type": "CATERING_CONTRACT",
+            "mode": "coop_ratna"
+          },
+          "immediateTrustDelta": 0,
+          "immediateWellbeingDelta": 0,
+          "debriefExplanation": "Sari menangani 40 porsi. DP Rp280.000; diskon bahan khusus bagian Sari.",
+          "key": "B"
+        },
+        {
+          "label": "Tolak dengan jelas",
+          "description": "Tidak ada kontrak atau penalti kepercayaan karena belum berkomitmen.",
+          "action": {
+            "type": "CATERING_CONTRACT",
+            "mode": "decline"
+          },
+          "immediateTrustDelta": 0,
+          "immediateWellbeingDelta": 0,
+          "debriefExplanation": "Tidak ada kontrak atau penalti kepercayaan karena belum berkomitmen.",
+          "key": "C"
+        }
+      ]
+    },
+    {
+      "week": 8,
+      "isJudgeDemoStop": true,
+      "title": "Kulkas warung rusak",
+      "learningObjective": "Bandingkan cadangan dengan pembiayaan.",
+      "featuredCharacterId": "kang_deden",
+      "animationState": "crisis_shock",
+      "characterDialogue": "Bu Sari, kulkasnya mati. Bahan yang tersisa bisa cepat rusak kalau tidak segera diservis.",
+      "shockTitle": "Kulkas warung rusak",
+      "shockDescription": "Bandingkan cadangan dengan pembiayaan.",
+      "eventDemandFactorBps": 10000,
+      "rawMaterialExtraCostRp": 0,
+      "choices": [
+        {
+          "label": "Pakai cadangan",
+          "description": "Servis Rp450.000. Cadangan dipakai dahulu, sisanya dari kas usaha.",
+          "action": {
+            "type": "FRIDGE_REPAIR",
+            "mode": "use_emergency_and_cash"
+          },
+          "immediateTrustDelta": 0,
+          "immediateWellbeingDelta": 0,
+          "debriefExplanation": "Servis Rp450.000. Cadangan dipakai dahulu, sisanya dari kas usaha.",
+          "key": "A"
+        },
+        {
+          "label": "Lihat pembiayaan",
+          "description": "Pinjaman Rp450.000 untuk membayar servis. Periksa biaya dan empat cicilannya.",
+          "action": {
+            "type": "FRIDGE_REPAIR",
+            "mode": "take_loan",
+            "loanType": "formal_productive"
+          },
+          "immediateTrustDelta": 0,
+          "immediateWellbeingDelta": 0,
+          "debriefExplanation": "Pinjaman Rp450.000 untuk membayar servis. Periksa biaya dan empat cicilannya.",
+          "key": "B"
+        },
+        {
+          "label": "Tunda servis",
+          "description": "Selama kulkas rusak, 90% sisa bahan terbuang di akhir minggu.",
+          "action": {
+            "type": "FRIDGE_REPAIR",
+            "mode": "delay_repair"
+          },
+          "immediateTrustDelta": 0,
+          "immediateWellbeingDelta": 0,
+          "debriefExplanation": "Selama kulkas rusak, 90% sisa bahan terbuang di akhir minggu.",
+          "key": "C"
+        }
+      ]
+    },
+    {
+      "week": 9,
+      "isJudgeDemoStop": false,
+      "title": "Pembiayaan dan bukti transfer",
+      "learningObjective": "Verifikasi pembayaran sebelum memproses pesanan.",
+      "featuredCharacterId": "si_cepat_cair",
+      "animationState": "idle_cooking",
+      "characterDialogue": "Ada tawaran dana cepat dan gambar bukti transfer. Jangan terburu-buru menyetujuinya.",
+      "shockTitle": "Pembiayaan dan bukti transfer",
+      "shockDescription": "Verifikasi pembayaran sebelum memproses pesanan.",
+      "eventDemandFactorBps": 10000,
+      "rawMaterialExtraCostRp": 0,
+      "choices": [
+        {
+          "label": "Tolak tawaran baru",
+          "description": "Lanjutkan usaha tanpa pinjaman baru.",
+          "action": {
+            "type": "NO_OP"
+          },
+          "immediateTrustDelta": 0,
+          "immediateWellbeingDelta": 0,
+          "debriefExplanation": "Lanjutkan usaha tanpa pinjaman baru.",
+          "key": "A"
+        },
+        {
+          "label": "Bandingkan pinjaman",
+          "description": "Hanya satu pinjaman aktif. Pencairan minggu ini dicicil M10–M13.",
+          "action": {
+            "type": "TAKE_LOAN",
+            "loanType": "formal_productive"
+          },
+          "immediateTrustDelta": 0,
+          "immediateWellbeingDelta": 0,
+          "debriefExplanation": "Hanya satu pinjaman aktif. Pencairan minggu ini dicicil M10–M13.",
+          "key": "B"
+        },
+        {
+          "label": "Verifikasi pembayaran",
+          "description": "Gambar bukti transfer tidak menambah kas. Pesanan belum diproses sebelum terverifikasi.",
+          "action": {
+            "type": "VERIFY_PAYMENT",
+            "acceptUnverified": false
+          },
+          "immediateTrustDelta": 0,
+          "immediateWellbeingDelta": 0,
+          "debriefExplanation": "Gambar bukti transfer tidak menambah kas. Pesanan belum diproses sebelum terverifikasi.",
+          "key": "C"
+        }
+      ]
+    },
+    {
+      "week": 10,
+      "isJudgeDemoStop": false,
+      "title": "Promo dan kapasitas pekerja",
+      "learningObjective": "Pisahkan permintaan potensial dari pesanan diterima.",
+      "featuredCharacterId": "kang_deden",
+      "animationState": "idle_cooking",
+      "characterDialogue": "Kalau pesanan bertambah, dapur dan tenaga kami ada batasnya.",
+      "shockTitle": "Promo dan kapasitas pekerja",
+      "shockDescription": "Pisahkan permintaan potensial dari pesanan diterima.",
+      "eventDemandFactorBps": 10000,
+      "rawMaterialExtraCostRp": 0,
+      "choices": [
+        {
+          "label": "Tambah pekerja paruh waktu",
+          "description": "Biaya Rp100.000 minggu ini; kapasitas aman menjadi 160 porsi.",
+          "action": {
+            "type": "WORKER_CAPACITY_MODE",
+            "mode": "hire_part_time",
+            "costRp": 100000
+          },
+          "immediateTrustDelta": 0,
+          "immediateWellbeingDelta": 0,
+          "debriefExplanation": "Biaya Rp100.000 minggu ini; kapasitas aman menjadi 160 porsi.",
+          "key": "A"
+        },
+        {
+          "label": "Batasi pesanan",
+          "description": "Kapasitas aman 120 porsi. Pesanan di atasnya tidak diterima.",
+          "action": {
+            "type": "WORKER_CAPACITY_MODE",
+            "mode": "cap_orders",
+            "costRp": 0
+          },
+          "immediateTrustDelta": 0,
+          "immediateWellbeingDelta": 0,
+          "debriefExplanation": "Kapasitas aman 120 porsi. Pesanan di atasnya tidak diterima.",
+          "key": "B"
+        },
+        {
+          "label": "Terima pesanan lebih banyak",
+          "description": "Batas teknis 160 porsi. Produksi di atas kapasitas aman menurunkan kondisi pekerja dan kepercayaan.",
+          "action": {
+            "type": "WORKER_CAPACITY_MODE",
+            "mode": "overtime",
+            "costRp": 0
+          },
+          "immediateTrustDelta": 0,
+          "immediateWellbeingDelta": 0,
+          "debriefExplanation": "Batas teknis 160 porsi. Produksi di atas kapasitas aman menurunkan kondisi pekerja dan kepercayaan.",
+          "key": "C"
+        }
+      ]
+    },
+    {
+      "week": 11,
+      "isJudgeDemoStop": false,
+      "title": "Harga bahan naik",
+      "learningObjective": "Tinjau harga, stok, atau menu alternatif.",
+      "featuredCharacterId": "haji_bambang",
+      "animationState": "idle_cooking",
+      "characterDialogue": "Bahan ayam naik Rp1.300 per porsi. Kita perlu meninjau rencana.",
+      "shockTitle": "Harga bahan naik",
+      "shockDescription": "Tinjau harga, stok, atau menu alternatif.",
+      "eventDemandFactorBps": 10000,
+      "rawMaterialExtraCostRp": 1300,
+      "choices": [
+        {
+          "label": "Sesuaikan harga dan stok",
+          "description": "Ayam memakai bahan Rp8.500 per porsi sebelum diskon grosir.",
+          "action": {
+            "type": "NO_OP"
+          },
+          "immediateTrustDelta": 0,
+          "immediateWellbeingDelta": 0,
+          "debriefExplanation": "Ayam memakai bahan Rp8.500 per porsi sebelum diskon grosir.",
+          "key": "A"
+        },
+        {
+          "label": "Beralih ke nasi telur",
+          "description": "Khusus minggu ini: harga Rp11.000, bahan Rp4.200, biaya produksi lain Rp3.300.",
+          "action": {
+            "type": "CONTEXTUAL_MENU_ADAPT",
+            "menuId": "nasi_telur_krispi"
+          },
+          "immediateTrustDelta": 0,
+          "immediateWellbeingDelta": 0,
+          "debriefExplanation": "Khusus minggu ini: harga Rp11.000, bahan Rp4.200, biaya produksi lain Rp3.300.",
+          "key": "B"
+        },
+        {
+          "label": "Tetap memakai ayam",
+          "description": "Harga bahan ayam tetap naik. Periksa margin sebelum menjalankan minggu.",
+          "action": {
+            "type": "NO_OP"
+          },
+          "immediateTrustDelta": 0,
+          "immediateWellbeingDelta": 0,
+          "debriefExplanation": "Harga bahan ayam tetap naik. Periksa margin sebelum menjalankan minggu.",
+          "key": "C"
+        }
+      ]
+    },
+    {
+      "week": 12,
+      "isJudgeDemoStop": true,
+      "title": "Ujian terakhir warung",
+      "learningObjective": "Nilai ketahanan dari kas, kewajiban, dan manusia.",
+      "featuredCharacterId": "mas_raka",
+      "animationState": "idle_cooking",
+      "characterDialogue": "Permintaan kembali melemah. Apa yang sudah kamu siapkan untuk menjaga warung?",
+      "shockTitle": "Ujian terakhir warung",
+      "shockDescription": "Nilai ketahanan dari kas, kewajiban, dan manusia.",
+      "eventDemandFactorBps": 7500,
+      "rawMaterialExtraCostRp": 1300,
+      "choices": [
+        {
+          "label": "Utamakan keberlanjutan",
+          "description": "Permintaan menjadi 75%. Bayar kewajiban dan periksa kebutuhan modal minggu berikutnya.",
+          "action": {
+            "type": "NO_OP"
+          },
+          "immediateTrustDelta": 0,
+          "immediateWellbeingDelta": 0,
+          "debriefExplanation": "Permintaan menjadi 75%. Bayar kewajiban dan periksa kebutuhan modal minggu berikutnya.",
+          "key": "A"
+        },
+        {
+          "label": "Tinjau kewajiban",
+          "description": "Cicilan M13 tetap masuk kewajiban akhir, bila pinjaman dicairkan M9.",
+          "action": {
+            "type": "NO_OP"
+          },
+          "immediateTrustDelta": 0,
+          "immediateWellbeingDelta": 0,
+          "debriefExplanation": "Cicilan M13 tetap masuk kewajiban akhir, bila pinjaman dicairkan M9.",
+          "key": "B"
+        },
+        {
+          "label": "Periksa kondisi tim",
+          "description": "Hasil akhir mempertimbangkan modal kerja, tunggakan, pelanggan, dan kondisi pekerja.",
+          "action": {
+            "type": "NO_OP"
+          },
+          "immediateTrustDelta": 0,
+          "immediateWellbeingDelta": 0,
+          "debriefExplanation": "Hasil akhir mempertimbangkan modal kerja, tunggakan, pelanggan, dan kondisi pekerja.",
+          "key": "C"
+        }
+      ]
+    }
+  ],
+  "optionalPoolEvents": [
+    {
+      "id": "late_supplier",
+      "eligibleWeeks": [3, 5],
+      "weight": 1,
+      "durationWeeks": 1,
+      "replacesMainEvent": false,
+      "incompatibleEventIds": [],
+      "title": "Pemasok terlambat",
+      "description": "Stok siap jual dibatasi 100 porsi.",
+      "maxStockOverridePortions": 100
+    },
+    {
+      "id": "stove_issue",
+      "eligibleWeeks": [8],
+      "weight": 1,
+      "durationWeeks": 1,
+      "replacesMainEvent": true,
+      "incompatibleEventIds": [],
+      "title": "Kompor bermasalah",
+      "description": "Servis Rp150.000 atau kapasitas turun menjadi 80 porsi.",
+      "capacityOverridePortions": 80,
+      "mitigationCostRp": 150000,
+      "mitigatedCapacityPortions": 120
+    },
+    {
+      "id": "worker_sick",
+      "eligibleWeeks": [10],
+      "weight": 1,
+      "durationWeeks": 1,
+      "replacesMainEvent": true,
+      "incompatibleEventIds": [],
+      "title": "Pekerja sakit",
+      "description": "Bantuan Rp100.000 memulihkan kapasitas dari 80 ke 120 porsi.",
+      "capacityOverridePortions": 80,
+      "mitigationCostRp": 100000,
+      "mitigatedCapacityPortions": 120
+    },
+    {
+      "id": "competitor_promo",
+      "eligibleWeeks": [5, 10],
+      "weight": 1,
+      "durationWeeks": 1,
+      "replacesMainEvent": false,
+      "incompatibleEventIds": [],
+      "title": "Kompetitor promo",
+      "description": "Permintaan reguler turun 10%.",
+      "demandMultiplierBps": 9000
+    },
+    {
+      "id": "positive_review",
+      "eligibleWeeks": [5, 7],
+      "weight": 1,
+      "durationWeeks": 1,
+      "replacesMainEvent": false,
+      "incompatibleEventIds": [],
+      "title": "Ulasan positif",
+      "description": "Kepercayaan naik 5 poin pada akhir minggu.",
+      "trustDelta": 5
+    },
+    {
+      "id": "wait_time_complaint",
+      "eligibleWeeks": [10],
+      "weight": 1,
+      "durationWeeks": 1,
+      "replacesMainEvent": false,
+      "incompatibleEventIds": [],
+      "title": "Keluhan waktu tunggu",
+      "description": "Tambahan penalti kepercayaan 5 poin hanya saat overload.",
+      "requiresOverload": true,
+      "trustDelta": -5
+    },
+    {
+      "id": "qris_temp_outage",
+      "eligibleWeeks": [4, 9],
+      "weight": 1,
+      "durationWeeks": 1,
+      "replacesMainEvent": false,
+      "incompatibleEventIds": [],
+      "title": "Gangguan QRIS sementara",
+      "description": "Faktor QRIS tidak tersedia minggu ini; WA tetap dapat dipakai.",
+      "qrisOutage": true
+    }
+  ]
+}

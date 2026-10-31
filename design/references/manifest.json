@@ -1,0 +1,80 @@
+[
+  {
+    "file": "01-good-pizza-gameplay.jpg",
+    "product": "Good Pizza, Great Pizza",
+    "sourcePage": "https://store.steampowered.com/app/770810/",
+    "imageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/770810/4b04a89eb412a17e95037a1a83a5bc8bb4aade51/ss_4b04a89eb412a17e95037a1a83a5bc8bb4aade51.1920x1080.jpg?t=1793216500",
+    "retrievedDate": "2026-10-30",
+    "note": "Screenshot resmi pada galeri Steam; pilih detail visual berdasarkan hasil inspeksi.",
+    "dimensions": [
+      1920,
+      1080
+    ],
+    "sha256": "0aff855eb45787bbaaf5141a620777da2b281b88aa479503b6d467b9f3f2a47e"
+  },
+  {
+    "file": "02-good-pizza-gameplay.jpg",
+    "product": "Good Pizza, Great Pizza",
+    "sourcePage": "https://store.steampowered.com/app/770810/",
+    "imageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/770810/be06d072ea901e674821b4975059813a71879aa8/ss_be06d072ea901e674821b4975059813a71879aa8.1920x1080.jpg?t=1793216500",
+    "retrievedDate": "2026-10-30",
+    "note": "Screenshot resmi pada galeri Steam.",
+    "dimensions": [
+      1920,
+      1080
+    ],
+    "sha256": "7010d725df57a02533a362f68575ec5a999da5a15ab2a43d31e8f02f986cd335"
+  },
+  {
+    "file": "03-duolingo-path-comparison-2022.png",
+    "product": "Duolingo",
+    "sourcePage": "https://blog.duolingo.com/new-duolingo-home-screen-design/",
+    "imageUrl": "https://storage.ghost.io/c/7a/33/7a33d0f4-927d-4fe8-a6bf-96131b5e76d4/content/images/2022/05/NEWV2Blog-Tree-Homescreen--2-.png",
+    "retrievedDate": "2026-10-30",
+    "note": "Perbandingan tree dan path pada artikel desain 2022; bukan klaim UI terbaru.",
+    "dimensions": [
+      992,
+      600
+    ],
+    "sha256": "13f842b07cb2661c0e22cb90dac377d144c3a2302e99b239f55bd2603f509048"
+  },
+  {
+    "file": "04-duolingo-mini-unit-2026.png",
+    "product": "Duolingo",
+    "sourcePage": "https://blog.duolingo.com/intermediate-mini-units/",
+    "imageUrl": "https://storage.ghost.io/c/7a/33/7a33d0f4-927d-4fe8-a6bf-96131b5e76d4/content/images/2026/02/mini-unit_-ES_EN--2.png",
+    "retrievedDate": "2026-10-30",
+    "note": "Ilustrasi/screenshot progres mini-unit dari artikel resmi; bukan hasil capture sesi pengguna.",
+    "dimensions": [
+      750,
+      2012
+    ],
+    "sha256": "f568c0807518cd0a7d19b812a2ea2f898ece64729b11065bad011f775cbe340d"
+  },
+  {
+    "file": "05-cashew-overview.jpg",
+    "product": "Cashew",
+    "sourcePage": "https://cashewapp.web.app/",
+    "imageUrl": "https://cashewapp.web.app/assets/store-promo/Frame%201.jpg",
+    "retrievedDate": "2026-10-30",
+    "note": "Materi promosi resmi aplikasi; bukan screenshot browser langsung.",
+    "dimensions": [
+      1620,
+      2880
+    ],
+    "sha256": "207ae5e32bfb25f4ca0e3cbfe9693c5b5bfa5ddac0352668e2b7a402dddf8ea7"
+  },
+  {
+    "file": "06-cashew-budget.jpg",
+    "product": "Cashew",
+    "sourcePage": "https://cashewapp.web.app/",
+    "imageUrl": "https://cashewapp.web.app/assets/screenshots/budget-promotion-light.jpg",
+    "retrievedDate": "2026-10-30",
+    "note": "Materi tampilan budget bertema terang dari situs resmi.",
+    "dimensions": [
+      1080,
+      2205
+    ],
+    "sha256": "f93c5dc3516a41a26ee51ce8f3292d1cee4d4894f76d682641f621d1336d979e"
+  }
+]

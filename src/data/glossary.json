@@ -1,0 +1,76 @@
+{
+  "schemaVersion": "2.2.0",
+  "contentVersion": "2026.10.31.2",
+  "entries": [
+    {
+      "id": "kas",
+      "plainTerm": "Uang warung",
+      "formalTerm": "Kas usaha",
+      "definition": "Uang yang tersedia untuk menjalankan usaha.",
+      "example": "Penjualan menambah kas; pembelian bahan menguranginya."
+    },
+    {
+      "id": "hpp",
+      "plainTerm": "Biaya sebenarnya per porsi",
+      "formalTerm": "Harga pokok produksi variabel",
+      "definition": "Bahan, kemasan, energi, dan tenaga produksi untuk setiap porsi.",
+      "example": "Ayam Rp7.200 + Rp3.300 biaya lain = Rp10.500."
+    },
+    {
+      "id": "fixed",
+      "plainTerm": "Biaya tetap mingguan",
+      "formalTerm": "Fixed cost",
+      "definition": "Biaya dasar yang tetap perlu dibayar walau penjualan berubah.",
+      "example": "Dalam simulasi Rp250.000 per minggu."
+    },
+    {
+      "id": "reserve",
+      "plainTerm": "Cadangan usaha",
+      "formalTerm": "Dana darurat",
+      "definition": "Uang usaha yang disisihkan untuk kebutuhan mendadak.",
+      "example": "Cadangan dapat dipakai membayar servis kulkas."
+    },
+    {
+      "id": "draw",
+      "plainTerm": "Ambil uang untuk pribadi",
+      "formalTerm": "Owner draw",
+      "definition": "Pemindahan kas usaha ke dompet pemilik; bukan biaya produksi.",
+      "example": "Kas turun Rp50.000 dan pribadi bertambah Rp50.000."
+    },
+    {
+      "id": "fifo",
+      "plainTerm": "Pakai bahan paling lama dulu",
+      "formalTerm": "First in, first out",
+      "definition": "Bahan dari pembelian paling lama dipakai terlebih dahulu.",
+      "example": "Bahan minggu lalu dipakai sebelum bahan baru."
+    },
+    {
+      "id": "waste",
+      "plainTerm": "Bahan terbuang",
+      "formalTerm": "Waste",
+      "definition": "Nilai bahan tersisa yang tidak dapat dibawa ke minggu berikutnya.",
+      "example": "Waste mengurangi persediaan; pembelian bahannya sudah dibayar."
+    },
+    {
+      "id": "debt",
+      "plainTerm": "Sisa yang harus dibayar",
+      "formalTerm": "Kewajiban utang",
+      "definition": "Pokok dan biaya pinjaman yang belum dilunasi.",
+      "example": "Pinjaman Rp450.000 + biaya Rp18.000 = Rp468.000."
+    },
+    {
+      "id": "margin",
+      "plainTerm": "Selisih harga dan HPP",
+      "formalTerm": "Margin kotor",
+      "definition": "Selisih harga jual dan HPP variabel sebelum biaya tetap.",
+      "example": "Rp14.000 − Rp10.500 = Rp3.500 per porsi."
+    },
+    {
+      "id": "dp",
+      "plainTerm": "Uang muka",
+      "formalTerm": "Down payment",
+      "definition": "Sebagian pembayaran kontrak yang diterima sebelum produksi.",
+      "example": "DP katering 50% dari Rp1.120.000 adalah Rp560.000."
+    }
+  ]
+}

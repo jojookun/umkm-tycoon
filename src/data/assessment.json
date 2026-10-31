@@ -1,0 +1,408 @@
+{
+  "schemaVersion": "2.2.0",
+  "contentVersion": "2026.10.31.2",
+  "pre": [
+    {
+      "id": "pre-cash_separation",
+      "pairId": "cash_separation",
+      "phase": "pre",
+      "scenarioText": "Warung memiliki kas Rp900.000. Pemilik mengambil Rp100.000 untuk keluarga. Bagaimana pencatatannya?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Kas usaha turun Rp100.000; uang pribadi naik Rp100.000.",
+          "isCorrect": true
+        },
+        {
+          "key": "B",
+          "text": "Kas usaha tetap karena uang milik sendiri.",
+          "isCorrect": false
+        },
+        {
+          "key": "C",
+          "text": "Catat sebagai penjualan baru.",
+          "isCorrect": false
+        }
+      ],
+      "reasonOptions": [
+        {
+          "key": "A",
+          "text": "Penarikan pemilik memindahkan uang antar-dompet, bukan biaya produksi.",
+          "isCorrect": true
+        },
+        {
+          "key": "B",
+          "text": "Setiap uang keluar selalu biaya bahan.",
+          "isCorrect": false
+        },
+        {
+          "key": "C",
+          "text": "Uang pribadi dan usaha tidak perlu dipisah.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "pre-true_hpp",
+      "pairId": "true_hpp",
+      "phase": "pre",
+      "scenarioText": "Bahan Rp7.200, kemasan Rp1.000, energi Rp800, tenaga Rp1.500 per porsi. Berapa HPP variabel?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Rp7.200.",
+          "isCorrect": false
+        },
+        {
+          "key": "B",
+          "text": "Rp10.500.",
+          "isCorrect": true
+        },
+        {
+          "key": "C",
+          "text": "Rp14.000.",
+          "isCorrect": false
+        }
+      ],
+      "reasonOptions": [
+        {
+          "key": "A",
+          "text": "HPP hanya menghitung bahan.",
+          "isCorrect": false
+        },
+        {
+          "key": "B",
+          "text": "Harga jual selalu sama dengan HPP.",
+          "isCorrect": false
+        },
+        {
+          "key": "C",
+          "text": "Semua komponen biaya variabel per porsi perlu dihitung.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": "pre-perishable_stock",
+      "pairId": "perishable_stock",
+      "phase": "pre",
+      "scenarioText": "Tersisa 20 porsi bahan, waste normal 50%. Apa yang dibawa ke minggu berikutnya?",
+      "options": [
+        {
+          "key": "A",
+          "text": "20 porsi.",
+          "isCorrect": false
+        },
+        {
+          "key": "B",
+          "text": "Tidak ada.",
+          "isCorrect": false
+        },
+        {
+          "key": "C",
+          "text": "10 porsi.",
+          "isCorrect": true
+        }
+      ],
+      "reasonOptions": [
+        {
+          "key": "A",
+          "text": "Hanya bahan yang masih layak dalam aturan simulasi dibawa ke minggu berikutnya.",
+          "isCorrect": true
+        },
+        {
+          "key": "B",
+          "text": "Waste menciptakan uang pengganti.",
+          "isCorrect": false
+        },
+        {
+          "key": "C",
+          "text": "Semua stok selalu habis terjual.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "pre-emergency_vs_loan",
+      "pairId": "emergency_vs_loan",
+      "phase": "pre",
+      "scenarioText": "Servis Rp450.000. Cadangan Rp300.000 dan kas cukup untuk sisanya. Apa akibat memakai cadangan?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Utang baru otomatis Rp450.000.",
+          "isCorrect": false
+        },
+        {
+          "key": "B",
+          "text": "Cadangan turun Rp300.000 dan kas turun Rp150.000 tanpa utang baru.",
+          "isCorrect": true
+        },
+        {
+          "key": "C",
+          "text": "Servis gratis karena ada cadangan.",
+          "isCorrect": false
+        }
+      ],
+      "reasonOptions": [
+        {
+          "key": "A",
+          "text": "Cadangan adalah uang usaha sendiri; pinjaman menambah kewajiban.",
+          "isCorrect": true
+        },
+        {
+          "key": "B",
+          "text": "Pinjaman tidak perlu dilunasi.",
+          "isCorrect": false
+        },
+        {
+          "key": "C",
+          "text": "Cadangan selalu wajib tetap utuh.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "pre-channel_capacity",
+      "pairId": "channel_capacity",
+      "phase": "pre",
+      "scenarioText": "Permintaan 140 porsi, stok cukup, kapasitas aman 120. Apa keputusan yang menjaga kondisi pekerja?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Terima semua tanpa bantuan.",
+          "isCorrect": false
+        },
+        {
+          "key": "B",
+          "text": "Abaikan kapasitas karena memakai QRIS.",
+          "isCorrect": false
+        },
+        {
+          "key": "C",
+          "text": "Batasi ke 120 atau tambah bantuan berbayar.",
+          "isCorrect": true
+        }
+      ],
+      "reasonOptions": [
+        {
+          "key": "A",
+          "text": "Kanal digital otomatis menambah kapasitas dapur.",
+          "isCorrect": false
+        },
+        {
+          "key": "B",
+          "text": "Permintaan potensial berbeda dari kapasitas pesanan yang dapat dilayani.",
+          "isCorrect": true
+        },
+        {
+          "key": "C",
+          "text": "Stok besar menjamin semua pesanan aman.",
+          "isCorrect": false
+        }
+      ]
+    }
+  ],
+  "post": [
+    {
+      "id": "post-cash_separation",
+      "pairId": "cash_separation",
+      "phase": "post",
+      "scenarioText": "Pemilik memindahkan Rp50.000 dari kas warung Rp600.000 ke dompet pribadinya. Apa hasilnya?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Kas warung tetap Rp600.000.",
+          "isCorrect": false
+        },
+        {
+          "key": "B",
+          "text": "Kas warung Rp550.000; pribadi bertambah Rp50.000.",
+          "isCorrect": true
+        },
+        {
+          "key": "C",
+          "text": "Pendapatan bertambah Rp50.000.",
+          "isCorrect": false
+        }
+      ],
+      "reasonOptions": [
+        {
+          "key": "A",
+          "text": "Penarikan pemilik memindahkan uang antar-dompet, bukan biaya produksi.",
+          "isCorrect": true
+        },
+        {
+          "key": "B",
+          "text": "Setiap uang keluar selalu biaya bahan.",
+          "isCorrect": false
+        },
+        {
+          "key": "C",
+          "text": "Uang pribadi dan usaha tidak perlu dipisah.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "post-true_hpp",
+      "pairId": "true_hpp",
+      "phase": "post",
+      "scenarioText": "Bahan Rp4.200, kemasan Rp1.000, energi Rp800, tenaga Rp1.500. Berapa HPP variabel nasi telur?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Rp7.500.",
+          "isCorrect": true
+        },
+        {
+          "key": "B",
+          "text": "Rp4.200.",
+          "isCorrect": false
+        },
+        {
+          "key": "C",
+          "text": "Rp11.000.",
+          "isCorrect": false
+        }
+      ],
+      "reasonOptions": [
+        {
+          "key": "A",
+          "text": "HPP hanya menghitung bahan.",
+          "isCorrect": false
+        },
+        {
+          "key": "B",
+          "text": "Harga jual selalu sama dengan HPP.",
+          "isCorrect": false
+        },
+        {
+          "key": "C",
+          "text": "Semua komponen biaya variabel per porsi perlu dihitung.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": "post-perishable_stock",
+      "pairId": "perishable_stock",
+      "phase": "post",
+      "scenarioText": "Tersisa 30 porsi bahan dengan waste 50%. Berapa persediaan yang dibawa ke minggu berikutnya?",
+      "options": [
+        {
+          "key": "A",
+          "text": "30 porsi.",
+          "isCorrect": false
+        },
+        {
+          "key": "B",
+          "text": "15 porsi.",
+          "isCorrect": true
+        },
+        {
+          "key": "C",
+          "text": "0 porsi.",
+          "isCorrect": false
+        }
+      ],
+      "reasonOptions": [
+        {
+          "key": "A",
+          "text": "Hanya bahan yang masih layak dalam aturan simulasi dibawa ke minggu berikutnya.",
+          "isCorrect": true
+        },
+        {
+          "key": "B",
+          "text": "Waste menciptakan uang pengganti.",
+          "isCorrect": false
+        },
+        {
+          "key": "C",
+          "text": "Semua stok selalu habis terjual.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "post-emergency_vs_loan",
+      "pairId": "emergency_vs_loan",
+      "phase": "post",
+      "scenarioText": "Pinjaman Rp450.000 memiliki biaya Rp18.000 dan empat cicilan sama besar. Berapa cicilan per minggu?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Rp112.500.",
+          "isCorrect": false
+        },
+        {
+          "key": "B",
+          "text": "Rp150.000.",
+          "isCorrect": false
+        },
+        {
+          "key": "C",
+          "text": "Rp117.000.",
+          "isCorrect": true
+        }
+      ],
+      "reasonOptions": [
+        {
+          "key": "A",
+          "text": "Cicilan mencakup pokok dan biaya: Rp468.000 dibagi empat.",
+          "isCorrect": true
+        },
+        {
+          "key": "B",
+          "text": "Cicilan hanya membayar pokok.",
+          "isCorrect": false
+        },
+        {
+          "key": "C",
+          "text": "Biaya pinjaman tidak perlu dihitung.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "post-channel_capacity",
+      "pairId": "channel_capacity",
+      "phase": "post",
+      "scenarioText": "Kanal WA aktif, permintaan 150, stok 145, kapasitas aman 120. Tanpa bantuan, berapa batas aman pesanan?",
+      "options": [
+        {
+          "key": "A",
+          "text": "120 porsi.",
+          "isCorrect": true
+        },
+        {
+          "key": "B",
+          "text": "145 porsi.",
+          "isCorrect": false
+        },
+        {
+          "key": "C",
+          "text": "150 porsi.",
+          "isCorrect": false
+        }
+      ],
+      "reasonOptions": [
+        {
+          "key": "A",
+          "text": "Kanal digital otomatis menambah kapasitas dapur.",
+          "isCorrect": false
+        },
+        {
+          "key": "B",
+          "text": "Permintaan potensial berbeda dari kapasitas pesanan yang dapat dilayani.",
+          "isCorrect": true
+        },
+        {
+          "key": "C",
+          "text": "Stok besar menjamin semua pesanan aman.",
+          "isCorrect": false
+        }
+      ]
+    }
+  ]
+}

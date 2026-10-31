@@ -1,0 +1,21 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+*.local
+test-results/
+playwright-report/
+
+# Bahan persiapan lokal dan ekspor kerja; bukan source distribusi.
+output/
+sources/
+*.docx
+*.pen
+*.zip
+design/exports/
+design/references/*.png
+design/references/*.jpg
+design/references/*.jpeg
+docs/qa/*session.json
+.playwright-mcp/
