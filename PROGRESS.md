@@ -1,5 +1,13 @@
 # Progres tim
 
+## 31 Oktober 2026, 20.35 WIB — main
+
+- Menambahkan tautan GitHub Muhammad Hanafi (Nafi): Yuuichi-Kun, dan Othniel Meishallom: Nako-chen di akhir README, sesuai screenshot pengguna.
+- Memperjelas bahwa deployment mengikuti main dan tag submission-24h tetap menyimpan snapshot awal.
+- Verifikasi: kedua profil GitHub berhasil dibaca dan cocok dengan nama pada screenshot; diff dokumentasi diperiksa. Tes aplikasi tidak dijalankan ulang karena tidak ada perubahan kode.
+- Publikasi sebelumnya berhasil: workflow build/deploy lulus, smoke test publik lulus, serta tag/release submission-24h telah diterbitkan. Berikutnya push pembaruan dokumentasi ini dan periksa README remote.
+- Sisa pekerjaan tim: video demo, pitch deck, dan pengiriman Devpost.
+
 ## 31 Oktober 2026, 20.32 WIB — main
 
 - Menyiapkan publikasi pertama source Tahan Banting: UMKM Tycoon, termasuk perbaikan enam temuan Argon dan desain Concept B.

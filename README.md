@@ -26,7 +26,7 @@ npm run preview
 
 Hosting statis memakai build command `npm run build` dan output directory `dist`. Workflow GitHub Actions memeriksa kode sebelum deployment GitHub Pages. Build Pages menggunakan `PUBLIC_BASE_PATH=/umkm-tycoon/`; build lokal tetap memakai root `/`. Logo, karakter, panggung, font, dan favicon mengikuti base path deployment.
 
-Tag `submission-24h` menunjuk snapshot source yang dikumpulkan. Deployment menggunakan commit yang sama; hasil workflow dapat diperiksa melalui badge di atas. Untuk hosting lain, lihat [panduan deployment](docs/DEPLOYMENT.md).
+Tag `submission-24h` menunjuk snapshot source yang dikumpulkan. Deployment mengikuti `main`; pembaruan dokumentasi setelah snapshot tidak memindahkan tag. Hasil workflow dapat diperiksa melalui badge di atas. Untuk hosting lain, lihat [panduan deployment](docs/DEPLOYMENT.md).
 
 ## Alur yang tersedia
 
@@ -106,5 +106,5 @@ Checklist dan tautan artefak: [docs/SUBMISSION.md](docs/SUBMISSION.md). Video de
 | Nama | Tanggung jawab |
 | --- | --- |
 | **Jonathan Christian Herutomo (Jona)** — [jojookun](https://github.com/jojookun) | Keseluruhan implementasi kode dan integrasi |
-| **Muhammad Hanafi (Nafi)** | Persiapan dan pengujian demo produk/web |
-| **Othniel Meishallom** | Hosting dan deployment |
+| **Muhammad Hanafi (Nafi)** — [Yuuichi-Kun](https://github.com/Yuuichi-Kun) | Persiapan dan pengujian demo produk/web |
+| **Othniel Meishallom** — [Nako-chen](https://github.com/Nako-chen) | Hosting dan deployment |
