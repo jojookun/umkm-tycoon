@@ -4,6 +4,8 @@
 
 **[Mainkan aplikasi](https://jojookun.github.io/umkm-tycoon/)** · **[Release submission-24h](https://github.com/jojookun/umkm-tycoon/releases/tag/submission-24h)** · [Source publik](https://github.com/jojookun/umkm-tycoon)
 
+[Video demo 2:58](https://www.youtube.com/watch?v=dfCQhcIpuFA) · [Pitch deck 10 slide](https://docs.google.com/presentation/d/1TrEqaCiC_fU58jjOyPGCaSd4XCkAUJCH/edit) · [Halaman proyek Devpost](https://devpost.com/software/tahan-banting-umkm-tycoon)
+
 Tahan Banting adalah simulasi mengelola Dapur Sari selama 12 minggu: menentukan stok dan harga, memisahkan uang usaha, menghadapi kejadian, dan mencoba keputusan alternatif. Implementasi lokal menggunakan React, Vite, TypeScript, Tailwind CSS, dan Zod.
 
 ## Menjalankan aplikasi
@@ -63,6 +65,14 @@ Setoran pribadi ke usaha belum menjadi aksi kontrak, sehingga UI tidak menawarka
 
 Coach saat ini berupa penjelasan lokal yang deterministik. **Tidak membutuhkan API Google atau API key.** Belum ada endpoint AI live, rate limiter server, service worker/PWA offline, sinkronisasi cloud, atau impor sesi. Ekspor JSON tersedia untuk arsip. Membuka aplikasi pertama kali tetap membutuhkan server/jaringan; jangan mengklaim dukungan offline penuh.
 
+### Mengapa API AI tidak dipakai pada MVP ini
+
+Integrasi API AI live tidak diaktifkan karena aplikasi dihosting sebagai situs statis di GitHub Pages, sementara proxy server dan pembatasan permintaan bersama belum tersedia. API key rahasia tidak boleh ditanamkan pada kode frontend yang dapat dibaca pengunjung. Integrasi berikutnya membutuhkan backend untuk menyimpan key dan mengendalikan permintaan.
+
+Untuk versi submission, coach Mas Raka menggunakan aturan lokal berdasarkan hasil engine: kas akhir minggu, nilai bahan terbuang, dan cicilan yang dibayar. Dengan pendekatan ini, penjelasan mengikuti data simulasi dan demo tidak bergantung pada latensi, kuota, atau ketersediaan layanan model eksternal. Perhitungan ekonomi dan replay tetap deterministik agar dapat diuji dan dibandingkan.
+
+Gemini/Antigravity digunakan sebagai bantuan pengembangan dan desain sebagaimana dicatat dalam deklarasi di bawah, bukan sebagai API yang dipanggil aplikasi saat bermain. Penggunaan AI selama pengembangan dibedakan dari fitur AI live pada produk. Integrasi live dapat dipertimbangkan setelah backend, pembatasan permintaan, penanganan kegagalan, dan evaluasi jawaban tersedia.
+
 Soal pre/post merupakan konten latihan buatan tim, belum instrumen tervalidasi. Skor keputusan dan alasan dilaporkan terpisah. Tes yang belum lengkap ditandai belum diukur; hasil pengujian otomatis bukan data peserta atau bukti dampak edukasi.
 
 ## AI Use and Third-Party Declaration
@@ -99,7 +109,7 @@ Dokumen riset awal, blueprint DOCX, PDF guidebook, kanvas `.pen`, dan paket kerj
 
 ## Submission INCEPTION 2026
 
-Checklist dan tautan artefak: [docs/SUBMISSION.md](docs/SUBMISSION.md). Video demo maksimal tiga menit, pitch deck, dan pengisian Devpost masih menjadi pekerjaan tim; keberadaan repository atau tag tidak membuktikan submission sudah dikirim.
+Checklist dan tautan artefak: [docs/SUBMISSION.md](docs/SUBMISSION.md). Video demo berdurasi sekitar 2:58 dan pitch deck 10 slide telah selesai; tautannya tersedia di atas bersama halaman proyek Devpost. Tim menyatakan tautan pengumpulan sudah dilengkapi. Keberadaan halaman proyek, repository, atau tag tidak membuktikan submission kompetisi sudah dikirim dan diterima panitia; status akhirnya diperiksa tim di Devpost.
 
 ## Tim
 
